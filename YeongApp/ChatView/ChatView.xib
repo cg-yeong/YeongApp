@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatView" customModule="YeongApp" customModuleProvider="target">
             <connections>
                 <outlet property="closeBtn" destination="CS5-Ff-JIp" id="YaY-ts-w1n"/>
+                <outlet property="fResume" destination="Njn-42-SIL" id="z1I-D8-dHo"/>
+                <outlet property="floatingBtn" destination="q48-fG-9nQ" id="wVL-de-rhA"/>
                 <outlet property="floatingView" destination="zIY-nG-5f3" id="7ns-pg-DS7"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="LX2-0R-l6Z"/>
             </connections>
@@ -32,26 +34,45 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="CLOSE"/>
                     <connections>
-                        <action selector="closeChatVie:" destination="-1" eventType="touchUpInside" id="X9j-AT-7T8"/>
                         <action selector="closeChatView:" destination="-1" eventType="touchUpInside" id="LYe-GF-VFd"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q48-fG-9nQ">
+                    <rect key="frame" x="16" y="20" width="91" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="FLOATING"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="q48-fG-9nQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Gqy-pE-1H3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CS5-Ff-JIp" secondAttribute="trailing" constant="16" id="aJs-d2-rWl"/>
                 <constraint firstItem="yTk-BE-8MJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="bVJ-Ys-ptC"/>
                 <constraint firstItem="yTk-BE-8MJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dzH-FJ-Ji7"/>
                 <constraint firstItem="CS5-Ff-JIp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="g4h-W2-4XX"/>
+                <constraint firstItem="q48-fG-9nQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="mb7-li-sxw"/>
             </constraints>
             <point key="canvasLocation" x="139" y="103"/>
         </view>
         <view contentMode="scaleToFill" id="zIY-nG-5f3">
             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njn-42-SIL">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="70"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="resume_Main"/>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="S0S-gy-Zhe"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
+            <constraints>
+                <constraint firstItem="S0S-gy-Zhe" firstAttribute="bottom" secondItem="Njn-42-SIL" secondAttribute="bottom" id="Cga-eY-4wM"/>
+                <constraint firstItem="S0S-gy-Zhe" firstAttribute="trailing" secondItem="Njn-42-SIL" secondAttribute="trailing" constant="50" id="M9e-7O-bUh"/>
+                <constraint firstItem="Njn-42-SIL" firstAttribute="leading" secondItem="S0S-gy-Zhe" secondAttribute="leading" id="Oue-yJ-bnV"/>
+                <constraint firstItem="Njn-42-SIL" firstAttribute="top" secondItem="S0S-gy-Zhe" secondAttribute="top" id="lG4-Oz-cje"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="850" y="-166"/>
         </view>

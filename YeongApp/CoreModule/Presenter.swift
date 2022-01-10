@@ -10,6 +10,7 @@ import UIKit
 
 class Presenter: PresenterDelegate, PresentedView, PresenterTransfer  {
     
+    var contextView: XibView!
     
     enum OnController {
         case navigationView
