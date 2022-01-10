@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07486A6ED5B1CFE549CBD500 /* Pods_YeongAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8441175144D2C34D1584D8D /* Pods_YeongAppTests.framework */; };
+		26C1E14EF4AD8AB9CAE546C6 /* Pods_YeongApp_YeongAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C9041616AFA21EF07887A1 /* Pods_YeongApp_YeongAppUITests.framework */; };
 		66C18B4F278BD0FB005042FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B4E278BD0FB005042FE /* AppDelegate.swift */; };
 		66C18B51278BD0FB005042FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B50278BD0FB005042FE /* SceneDelegate.swift */; };
 		66C18B53278BD0FB005042FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B52278BD0FB005042FE /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 		66C18B66278BD0FC005042FE /* YeongAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B65278BD0FC005042FE /* YeongAppTests.swift */; };
 		66C18B70278BD0FC005042FE /* YeongAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B6F278BD0FC005042FE /* YeongAppUITests.swift */; };
 		66C18B72278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B71278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift */; };
+		BEF313EBC049AE4BA5003B6D /* Pods_YeongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32C9041616AFA21EF07887A1 /* Pods_YeongApp_YeongAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongApp_YeongAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46BD6431D0270D615B4A5007 /* Pods-YeongApp-YeongAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp-YeongAppUITests.release.xcconfig"; path = "Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C9DCA9A9991E7F30EB15CC1 /* Pods-YeongApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.release.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.release.xcconfig"; sourceTree = "<group>"; };
 		66C18B4B278BD0FB005042FE /* YeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C18B4E278BD0FB005042FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C18B50278BD0FB005042FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		66C18B6B278BD0FC005042FE /* YeongAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeongAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C18B6F278BD0FC005042FE /* YeongAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongAppUITests.swift; sourceTree = "<group>"; };
 		66C18B71278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YeongAppTests/Pods-YeongAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.debug.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.debug.xcconfig"; sourceTree = "<group>"; };
+		755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8441175144D2C34D1584D8D /* Pods_YeongAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6209A4428E43F582750C1B3 /* Pods-YeongAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongAppTests.release.xcconfig"; path = "Target Support Files/Pods-YeongAppTests/Pods-YeongAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDDFA3343FB2D2383A388A08 /* Pods-YeongApp-YeongAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp-YeongAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF313EBC049AE4BA5003B6D /* Pods_YeongApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07486A6ED5B1CFE549CBD500 /* Pods_YeongAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C1E14EF4AD8AB9CAE546C6 /* Pods_YeongApp_YeongAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				66C18B64278BD0FC005042FE /* YeongAppTests */,
 				66C18B6E278BD0FC005042FE /* YeongAppUITests */,
 				66C18B4C278BD0FB005042FE /* Products */,
+				D8869896B22ADE1A6EB9E982 /* Pods */,
+				B3A531C549BA8C3EDE87C9EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,30 @@
 			path = YeongAppUITests;
 			sourceTree = "<group>";
 		};
+		B3A531C549BA8C3EDE87C9EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */,
+				32C9041616AFA21EF07887A1 /* Pods_YeongApp_YeongAppUITests.framework */,
+				A8441175144D2C34D1584D8D /* Pods_YeongAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8869896B22ADE1A6EB9E982 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */,
+				4C9DCA9A9991E7F30EB15CC1 /* Pods-YeongApp.release.xcconfig */,
+				EDDFA3343FB2D2383A388A08 /* Pods-YeongApp-YeongAppUITests.debug.xcconfig */,
+				46BD6431D0270D615B4A5007 /* Pods-YeongApp-YeongAppUITests.release.xcconfig */,
+				67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */,
+				B6209A4428E43F582750C1B3 /* Pods-YeongAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C18B75278BD0FC005042FE /* Build configuration list for PBXNativeTarget "YeongApp" */;
 			buildPhases = (
+				D02A5FE4E324ADB511D69FA9 /* [CP] Check Pods Manifest.lock */,
 				66C18B47278BD0FB005042FE /* Sources */,
 				66C18B48278BD0FB005042FE /* Frameworks */,
 				66C18B49278BD0FB005042FE /* Resources */,
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C18B78278BD0FC005042FE /* Build configuration list for PBXNativeTarget "YeongAppTests" */;
 			buildPhases = (
+				647746AD02A4D5A3953D4E26 /* [CP] Check Pods Manifest.lock */,
 				66C18B5D278BD0FC005042FE /* Sources */,
 				66C18B5E278BD0FC005042FE /* Frameworks */,
 				66C18B5F278BD0FC005042FE /* Resources */,
@@ -169,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C18B7B278BD0FC005042FE /* Build configuration list for PBXNativeTarget "YeongAppUITests" */;
 			buildPhases = (
+				AAE488DE64D5D7236D9141EF /* [CP] Check Pods Manifest.lock */,
 				66C18B67278BD0FC005042FE /* Sources */,
 				66C18B68278BD0FC005042FE /* Frameworks */,
 				66C18B69278BD0FC005042FE /* Resources */,
@@ -252,6 +296,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		647746AD02A4D5A3953D4E26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YeongAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE488DE64D5D7236D9141EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YeongApp-YeongAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D02A5FE4E324ADB511D69FA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YeongApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66C18B47278BD0FB005042FE /* Sources */ = {
@@ -434,6 +547,7 @@
 		};
 		66C18B76278BD0FC005042FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +576,7 @@
 		};
 		66C18B77278BD0FC005042FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9DCA9A9991E7F30EB15CC1 /* Pods-YeongApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +605,7 @@
 		};
 		66C18B79278BD0FC005042FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +631,7 @@
 		};
 		66C18B7A278BD0FC005042FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6209A4428E43F582750C1B3 /* Pods-YeongAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +657,7 @@
 		};
 		66C18B7C278BD0FC005042FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDDFA3343FB2D2383A388A08 /* Pods-YeongApp-YeongAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +681,7 @@
 		};
 		66C18B7D278BD0FC005042FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46BD6431D0270D615B4A5007 /* Pods-YeongApp-YeongAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
