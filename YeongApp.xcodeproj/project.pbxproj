@@ -17,7 +17,6 @@
 		66C18B5B278BD0FC005042FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C18B59278BD0FC005042FE /* LaunchScreen.storyboard */; };
 		66C18B66278BD0FC005042FE /* YeongAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B65278BD0FC005042FE /* YeongAppTests.swift */; };
 		66C18B70278BD0FC005042FE /* YeongAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B6F278BD0FC005042FE /* YeongAppUITests.swift */; };
-		66C18B72278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B71278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift */; };
 		BEF313EBC049AE4BA5003B6D /* Pods_YeongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		66C18B65278BD0FC005042FE /* YeongAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongAppTests.swift; sourceTree = "<group>"; };
 		66C18B6B278BD0FC005042FE /* YeongAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeongAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C18B6F278BD0FC005042FE /* YeongAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongAppUITests.swift; sourceTree = "<group>"; };
-		66C18B71278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YeongAppTests/Pods-YeongAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.debug.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.debug.xcconfig"; sourceTree = "<group>"; };
 		755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				66C18B6F278BD0FC005042FE /* YeongAppUITests.swift */,
-				66C18B71278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift */,
 			);
 			path = YeongAppUITests;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 				67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */,
 				B6209A4428E43F582750C1B3 /* Pods-YeongAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +175,7 @@
 				66C18B47278BD0FB005042FE /* Sources */,
 				66C18B48278BD0FB005042FE /* Frameworks */,
 				66C18B49278BD0FB005042FE /* Resources */,
+				6728127934EBEB8EE06D1E48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +213,7 @@
 				66C18B67278BD0FC005042FE /* Sources */,
 				66C18B68278BD0FC005042FE /* Frameworks */,
 				66C18B69278BD0FC005042FE /* Resources */,
+				FAF3C8E80EAB909F28DDA39E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +318,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6728127934EBEB8EE06D1E48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeongApp/Pods-YeongApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeongApp/Pods-YeongApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YeongApp/Pods-YeongApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AAE488DE64D5D7236D9141EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +379,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FAF3C8E80EAB909F28DDA39E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -389,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C18B72278BD0FC005042FE /* YeongAppUITestsLaunchTests.swift in Sources */,
 				66C18B70278BD0FC005042FE /* YeongAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -535,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -561,6 +592,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +622,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
