@@ -18,11 +18,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openChat(_ sender: Any) {
-        
+        if let _ = App.presenter.contextView as? ChatView {
+            return
+        }
         let chatView = ChatView()
-        chatView.frame = self.con.bounds
-        chatView.backgroundColor = .green
-        self.con.addSubview(chatView)
+        chatView.frame = self.view.bounds
+        App.presenter.contextView = chatView
+        self.view.addSubview(chatView)
     }
     
     func visibleViewController() {

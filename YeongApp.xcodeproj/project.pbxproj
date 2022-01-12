@@ -19,6 +19,10 @@
 		66C18B96278C018C005042FE /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B94278C018C005042FE /* ChatView.swift */; };
 		66C18B97278C018C005042FE /* ChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C18B95278C018C005042FE /* ChatView.xib */; };
 		66C18B9B278C054E005042FE /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B9A278C054E005042FE /* XibView.swift */; };
+		66C18B9E278C1059005042FE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B9D278C1059005042FE /* App.swift */; };
+		66C18BA0278C106D005042FE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B9F278C106D005042FE /* Presenter.swift */; };
+		66C18BA2278C1139005042FE /* PresenterTrasnfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */; };
+		66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18BAC278E9F04005042FE /* Extension+etc.swift */; };
 		BEF313EBC049AE4BA5003B6D /* Pods_YeongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,10 @@
 		66C18B94278C018C005042FE /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		66C18B95278C018C005042FE /* ChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatView.xib; sourceTree = "<group>"; };
 		66C18B9A278C054E005042FE /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		66C18B9D278C1059005042FE /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		66C18B9F278C106D005042FE /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterTrasnfer.swift; sourceTree = "<group>"; };
+		66C18BAC278E9F04005042FE /* Extension+etc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+etc.swift"; sourceTree = "<group>"; };
 		67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YeongAppTests/Pods-YeongAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.debug.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.debug.xcconfig"; sourceTree = "<group>"; };
 		755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +126,8 @@
 		66C18B4D278BD0FB005042FE /* YeongApp */ = {
 			isa = PBXGroup;
 			children = (
+				66C18BAB278E9ECC005042FE /* Extension */,
+				66C18B9C278C104B005042FE /* CoreModule */,
 				66C18B98278C0542005042FE /* Generals */,
 				66C18B93278C018C005042FE /* ChatView */,
 				66C18B4E278BD0FB005042FE /* AppDelegate.swift */,
@@ -169,6 +179,24 @@
 				66C18B9A278C054E005042FE /* XibView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		66C18B9C278C104B005042FE /* CoreModule */ = {
+			isa = PBXGroup;
+			children = (
+				66C18B9D278C1059005042FE /* App.swift */,
+				66C18B9F278C106D005042FE /* Presenter.swift */,
+				66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */,
+			);
+			path = CoreModule;
+			sourceTree = "<group>";
+		};
+		66C18BAB278E9ECC005042FE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66C18BAC278E9F04005042FE /* Extension+etc.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B3A531C549BA8C3EDE87C9EF /* Frameworks */ = {
@@ -434,9 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C18BA0278C106D005042FE /* Presenter.swift in Sources */,
 				66C18B53278BD0FB005042FE /* ViewController.swift in Sources */,
+				66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */,
 				66C18B96278C018C005042FE /* ChatView.swift in Sources */,
+				66C18BA2278C1139005042FE /* PresenterTrasnfer.swift in Sources */,
 				66C18B9B278C054E005042FE /* XibView.swift in Sources */,
+				66C18B9E278C1059005042FE /* App.swift in Sources */,
 				66C18B4F278BD0FB005042FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
