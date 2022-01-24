@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("viewDidLoad")
+        App.presenter.mainVC = self
     }
 
     @IBAction func openChat(_ sender: Any) {

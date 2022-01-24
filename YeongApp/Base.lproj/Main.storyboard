@@ -21,9 +21,9 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B0-el-kjq">
-                                        <rect key="frame" x="173.5" y="393.5" width="67" height="31"/>
+                                        <rect key="frame" x="162" y="393.5" width="90" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="OpenChat"/>
                                         <connections>
                                             <action selector="openChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qg9-eB-sEv"/>
                                         </connections>
