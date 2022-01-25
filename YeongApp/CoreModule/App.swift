@@ -10,5 +10,5 @@ import Foundation
 class App {
     
     static var presenter: Presenter = Presenter()
-    
+    static var data: AppData = AppData()
 }

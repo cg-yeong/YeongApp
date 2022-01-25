@@ -10,6 +10,9 @@
 		07486A6ED5B1CFE549CBD500 /* Pods_YeongAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8441175144D2C34D1584D8D /* Pods_YeongAppTests.framework */; };
 		26C1E14EF4AD8AB9CAE546C6 /* Pods_YeongApp_YeongAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C9041616AFA21EF07887A1 /* Pods_YeongApp_YeongAppUITests.framework */; };
 		6636E112279FB6C000EA4550 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636E111279FB6C000EA4550 /* Extension+UILabel.swift */; };
+		6682A926279FD0000033BE63 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6682A924279FD0000033BE63 /* Model.xcdatamodeld */; };
+		6682A94B279FD85C0033BE63 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682A94A279FD85C0033BE63 /* AppData.swift */; };
+		6682A94D279FDF1D0033BE63 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682A94C279FDF1D0033BE63 /* PersistenceManager.swift */; };
 		66C18B4F278BD0FB005042FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B4E278BD0FB005042FE /* AppDelegate.swift */; };
 		66C18B53278BD0FB005042FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B52278BD0FB005042FE /* ViewController.swift */; };
 		66C18B56278BD0FB005042FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C18B54278BD0FB005042FE /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		46BD6431D0270D615B4A5007 /* Pods-YeongApp-YeongAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp-YeongAppUITests.release.xcconfig"; path = "Target Support Files/Pods-YeongApp-YeongAppUITests/Pods-YeongApp-YeongAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C9DCA9A9991E7F30EB15CC1 /* Pods-YeongApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.release.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.release.xcconfig"; sourceTree = "<group>"; };
 		6636E111279FB6C000EA4550 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
+		6682A925279FD0000033BE63 /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
+		6682A94A279FD85C0033BE63 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		6682A94C279FDF1D0033BE63 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		66C18B4B278BD0FB005042FE /* YeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C18B4E278BD0FB005042FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C18B52278BD0FB005042FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 			children = (
 				66C18B94278C018C005042FE /* ChatView.swift */,
 				66C18B95278C018C005042FE /* ChatView.xib */,
+				6682A924279FD0000033BE63 /* Model.xcdatamodeld */,
 			);
 			path = ChatView;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				66C18B9D278C1059005042FE /* App.swift */,
+				6682A94A279FD85C0033BE63 /* AppData.swift */,
+				6682A94C279FDF1D0033BE63 /* PersistenceManager.swift */,
 				66C18B9F278C106D005042FE /* Presenter.swift */,
 				66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */,
 			);
@@ -468,9 +477,12 @@
 				66C18BA0278C106D005042FE /* Presenter.swift in Sources */,
 				66C18B53278BD0FB005042FE /* ViewController.swift in Sources */,
 				66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */,
+				6682A94D279FDF1D0033BE63 /* PersistenceManager.swift in Sources */,
+				6682A94B279FD85C0033BE63 /* AppData.swift in Sources */,
 				66C18B96278C018C005042FE /* ChatView.swift in Sources */,
 				66C18BA2278C1139005042FE /* PresenterTrasnfer.swift in Sources */,
 				66C18B9B278C054E005042FE /* XibView.swift in Sources */,
+				6682A926279FD0000033BE63 /* Model.xcdatamodeld in Sources */,
 				6636E112279FB6C000EA4550 /* Extension+UILabel.swift in Sources */,
 				66C18B9E278C1059005042FE /* App.swift in Sources */,
 				66C18B4F278BD0FB005042FE /* AppDelegate.swift in Sources */,
@@ -844,6 +856,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6682A924279FD0000033BE63 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6682A925279FD0000033BE63 /* Contact.xcdatamodel */,
+			);
+			currentVersion = 6682A925279FD0000033BE63 /* Contact.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 66C18B43278BD0FB005042FE /* Project object */;
 }
