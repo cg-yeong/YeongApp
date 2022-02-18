@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Presenter: PresenterDelegate, PresentedView, PresenterTransfer  {
+class Presenter: PresenterDelegate, PresentedView, PresentedTransfer {
     
     var mainVC: UIViewController!
     var contextView: XibView!
