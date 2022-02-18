@@ -22,13 +22,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var con: UIView!
     @IBOutlet weak var chatBtn: UIButton!
     
-    let yeong = Person(name: "Yeong", phoneNumber: "010-3333-4444", shortNumber: 1, habbit: ["game", "vi"])
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("viewDidLoad")
         App.presenter.mainVC = self
         
+        
+    }
+
+    @IBAction func openChat(_ sender: Any) {
+        App.presenter.addSubview(.visibleView, type: ChatView.self) { view in
+            view.tag = 1010
+            App.presenter.contextView = view
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func setCoreData1() {
+        
+        let yeong = Person(name: "Yeong", phoneNumber: "010-3333-4444", shortNumber: 1, habbit: ["game", "vi"])
         let entity = NSEntityDescription.entity(forEntityName: "Contact", in: App.data.persistence.context)
         if let entity = entity {
             let person = NSManagedObject(entity: entity, insertInto: App.data.persistence.context)
@@ -45,25 +67,7 @@ class ViewController: UIViewController {
         let walker = Person(name: "Walker", phoneNumber: "010-1234-5678", shortNumber: 2, habbit: ["games", "asdf"])
         App.data.persistence.insertPerson(person: walker)
     }
-
-    @IBAction func openChat(_ sender: Any) {
-//        if let _ = App.presenter.contextView as? ChatView {
-//            return
-//        }
-//        let chatView = ChatView()
-//        chatView.frame = self.view.bounds
-//        App.presenter.contextView = chatView
-//        self.view.addSubview(chatView)
-//        do {
-//            //try PersistenceManager.sharedInstance.context.fetch(Contact.fetchRequest())
-//            let contact = try App.data.persistence.context.fetch(Contact.fetchRequest())
-//            contact.forEach {
-//                print($0.name, $0.phoneNumber, $0.shortNumber)
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-        
+    func crudCoreData1() {
         // delete
         let dequest: NSFetchRequest<Contact> = Contact.fetchRequest()
         let detchResult = App.data.persistence.fetch(request: dequest)
@@ -84,13 +88,6 @@ class ViewController: UIViewController {
         if arr.isEmpty {
             print("clean")
         }
-        
-        
-        
-        
-    }
-    
-    func visibleViewController() {
         
     }
 }

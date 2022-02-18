@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatView" customModule="YeongApp" customModuleProvider="target">
             <connections>
+                <outlet property="chatCollectionView" destination="Zyu-2K-AdH" id="Xtq-yM-v6J"/>
+                <outlet property="chatSendBtn" destination="mq4-I6-9Xu" id="uKD-AB-s0i"/>
+                <outlet property="chatTextView" destination="sd6-UZ-oGV" id="pe6-kx-0Ya"/>
+                <outlet property="chatView_constraint_bottom" destination="vIv-AL-cgJ" id="nKy-f3-iIJ"/>
                 <outlet property="closeBtn" destination="CS5-Ff-JIp" id="YaY-ts-w1n"/>
                 <outlet property="fResume" destination="Njn-42-SIL" id="z1I-D8-dHo"/>
                 <outlet property="floatingBtn" destination="q48-fG-9nQ" id="wVL-de-rhA"/>
@@ -31,7 +35,7 @@
                     <rect key="frame" x="0.0" y="47" width="375" height="573"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-2K-AdH">
-                            <rect key="frame" x="15" y="0.0" width="345" height="563"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFF-pG-JBb">
                                 <size key="itemSize" width="128" height="128"/>
@@ -42,10 +46,10 @@
                         </collectionView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Zyu-2K-AdH" secondAttribute="bottom" constant="10" id="DxV-e9-1fh"/>
-                        <constraint firstAttribute="trailing" secondItem="Zyu-2K-AdH" secondAttribute="trailing" constant="15" id="M87-jc-CPE"/>
+                        <constraint firstAttribute="bottom" secondItem="Zyu-2K-AdH" secondAttribute="bottom" id="DxV-e9-1fh"/>
+                        <constraint firstAttribute="trailing" secondItem="Zyu-2K-AdH" secondAttribute="trailing" id="M87-jc-CPE"/>
                         <constraint firstAttribute="height" constant="573" id="OIo-j0-K4N"/>
-                        <constraint firstItem="Zyu-2K-AdH" firstAttribute="leading" secondItem="OgW-98-G7t" secondAttribute="leading" constant="15" id="ZE4-RT-7tX"/>
+                        <constraint firstItem="Zyu-2K-AdH" firstAttribute="leading" secondItem="OgW-98-G7t" secondAttribute="leading" id="ZE4-RT-7tX"/>
                         <constraint firstItem="Zyu-2K-AdH" firstAttribute="top" secondItem="OgW-98-G7t" secondAttribute="top" id="iy1-Ba-62f"/>
                     </constraints>
                 </view>

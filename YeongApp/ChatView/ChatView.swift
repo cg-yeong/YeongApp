@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 class ChatView: XibView {
     
@@ -18,7 +19,18 @@ class ChatView: XibView {
     @IBOutlet weak var floatingBtn: UIButton!
     @IBOutlet weak var fResume: UIButton!
     
+    @IBOutlet weak var chatCollectionView: UICollectionView!
+    
+    @IBOutlet weak var chatTextView: UITextView!
+    @IBOutlet weak var chatSendBtn: UIButton!
+    
+    @IBOutlet weak var chatView_constraint_bottom: NSLayoutConstraint!
+    
+    
+    var chatDatas: [JSON] = []
+    
     let bag = DisposeBag()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         if isInitialized {
@@ -29,16 +41,11 @@ class ChatView: XibView {
     }
     
     func initialize() {
-        floatingBtn.rx.tap
-            .bind {[weak self] in
-                self?.toggleFloating(true)
-            }.disposed(by: bag)
-        
-        fResume.rx.tap
-            .bind {[weak self] in
-                self?.toggleFloating(false)
-            }.disposed(by: bag)
+        addObserver()
+        setChatCollectionView()
+        bind()
     }
+    
     
     
     
@@ -46,6 +53,11 @@ class ChatView: XibView {
         self.removeFromSuperview()
         App.presenter.contextView = nil
     }
+    
+    
+    
+    
+    
     
     func toggleFloating(_ mode: Bool) {
         if mode {
