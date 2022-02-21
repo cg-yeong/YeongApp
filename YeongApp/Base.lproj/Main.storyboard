@@ -28,11 +28,24 @@
                                             <action selector="openChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qg9-eB-sEv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-gw-ez5">
+                                        <rect key="frame" x="161.5" y="473" width="91" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="P2P-U1-DEC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="like popup"/>
+                                        <connections>
+                                            <action selector="likePopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIy-tM-hF5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstItem="3B0-el-kjq" firstAttribute="centerY" secondItem="K2L-pm-ITK" secondAttribute="centerY" id="Vdy-Ou-bmr"/>
+                                    <constraint firstItem="Wal-gw-ez5" firstAttribute="top" secondItem="3B0-el-kjq" secondAttribute="bottom" constant="48.5" id="dvQ-eK-GJH"/>
                                     <constraint firstItem="3B0-el-kjq" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="xgK-cr-U3c"/>
+                                    <constraint firstItem="Wal-gw-ez5" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="xtk-v7-Rwe"/>
                                 </constraints>
                             </view>
                         </subviews>

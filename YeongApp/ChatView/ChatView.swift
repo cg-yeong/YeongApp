@@ -59,6 +59,23 @@ class ChatView: XibView {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func toggleFloating(_ mode: Bool) {
         if mode {
             loadingSubview(mode, floatingView)

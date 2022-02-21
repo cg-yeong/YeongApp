@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var con: UIView!
     @IBOutlet weak var chatBtn: UIButton!
     
+    override var prefersStatusBarHidden: Bool { return true }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,6 +41,12 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func likePopup(_ sender: Any) {
+        App.presenter.addSubview(.visibleView, type: LikePopup.self) { view in
+            view.tag = 1010
+            App.presenter.contextView = view
+        }
+    }
     
     
     
