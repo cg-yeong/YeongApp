@@ -8,6 +8,15 @@ import UIKit
 
 class LikePopup: XibView {
     
+    let goBack: UIButton = {
+        let backBtn = UIButton(frame: CGRect(x: 10, y: 10, width: 50, height: 30))
+        backBtn.setTitle("뒤 로 가 기", for: .normal)
+        backBtn.backgroundColor = .brown
+        backBtn.addTarget(self, action: #selector(close), for: .touchUpInside)
+        
+        return backBtn
+    }()
+    
     let bgImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "fb_core_data_bg"))
         return imageView
@@ -16,18 +25,6 @@ class LikePopup: XibView {
     let iconsContainerView: UIView = {
         let containerView = UIView()
         containerView.backgroundColor = .white
-        
-//        let redView = UIView()
-//        redView.backgroundColor = .red
-//        let blueView = UIView()
-//        blueView.backgroundColor = .blue
-//        let yellowView = UIView()
-//        yellowView.backgroundColor = .yellow
-//        let grayView = UIView()
-//        grayView.backgroundColor = .gray
-//
-//        let arrangedSubviews = [redView, blueView, yellowView, grayView]
-        
         
         // configure options
         let iconHeight: CGFloat = 38
@@ -79,6 +76,7 @@ class LikePopup: XibView {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.addSubview(bgImageView)
+        self.addSubview(goBack)
         bgImageView.contentMode = .scaleAspectFit
         bgImageView.frame  = UIScreen.main.bounds
         bgImageView.isUserInteractionEnabled = true
@@ -167,5 +165,9 @@ class LikePopup: XibView {
             
         }
 
+    }
+    
+    @objc func close() {
+        self.removeFromSuperview()
     }
 }
