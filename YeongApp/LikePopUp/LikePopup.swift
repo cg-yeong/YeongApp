@@ -40,10 +40,6 @@ class LikePopup: XibView {
             imageView.isUserInteractionEnabled = true
             
             return imageView
-//            let v = UIView()
-//            v.backgroundColor = color
-//            v.layer.cornerRadius = iconHeight / 2
-//            return v
         })
         
         
@@ -73,15 +69,65 @@ class LikePopup: XibView {
         return containerView
     }()
     
+    let emoteContainerView: UIView = {
+       let containerView = UIView()
+        containerView.backgroundColor = .white
+        
+        // configure
+        let emoHeight: CGFloat = 38
+        let padding: CGFloat = 6
+        let imgs = [#imageLiteral(resourceName: "blue_like"), #imageLiteral(resourceName: "red_heart"), #imageLiteral(resourceName: "cry"), #imageLiteral(resourceName: "surprised"), #imageLiteral(resourceName: "cry_laugh"), #imageLiteral(resourceName: "angry")]
+        
+        let arrangedSubviews = imgs.map { (img) -> UIButton in
+            let imgBtn = UIButton(type: .custom)
+            imgBtn.setImage(img, for: .normal)
+            imgBtn.addTarget(self, action: #selector(setImgBtn(sender:)), for: .touchUpInside)
+            
+            return imgBtn
+        }
+        
+        let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
+        stackView.distribution = .fillEqually
+        stackView.spacing = padding
+        stackView.layoutMargins = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        
+        containerView.addSubview(stackView)
+        
+        let width = CGFloat(arrangedSubviews.count) * emoHeight + (CGFloat(arrangedSubviews.count) + 1) * padding
+        containerView.frame = CGRect(x: 0, y: 0, width: width, height: emoHeight + 2 * padding)
+        containerView.layer.cornerRadius = containerView.frame.height / 2
+        
+        // shadow
+        containerView.layer.shadowColor = UIColor(white: 0.4, alpha: 0.4).cgColor
+        containerView.layer.shadowRadius = 8
+        containerView.layer.shadowOpacity = 0.5
+        containerView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        
+        stackView.frame = containerView.frame
+        
+        return containerView
+    }()
+    
+    let addEmoteBtn: UIButton = {
+        
+        let btn = UIButton(frame: CGRect(x: 50, y: 250, width: 50, height: 50))
+        btn.setImage(UIImage(named: "blue_like"), for: .normal)
+        btn.addTarget(self, action: #selector(addEmote), for: .touchUpInside)
+        return btn
+    }()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.addSubview(bgImageView)
         self.addSubview(goBack)
+        self.addSubview(addEmoteBtn)
         bgImageView.contentMode = .scaleAspectFit
         bgImageView.frame  = UIScreen.main.bounds
         bgImageView.isUserInteractionEnabled = true
         
         setupLongPressGesture()
+        setEmoteTap()
     }
     
     override func removeFromSuperview() {
@@ -89,85 +135,20 @@ class LikePopup: XibView {
         App.presenter.contextView = nil
     }
     
-    fileprivate func setupLongPressGesture() {
-        bgImageView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress)))
+    @objc func setImgBtn(sender: UIButton) {
+        let img = sender.image(for: .normal)
+        sender.setImage(UIImage(named: "btnRadOn"), for: .highlighted)
+        self.addEmoteBtn.setImage(img, for: .normal)
         
     }
-    
-    @objc func handleLongPress(gesture: UILongPressGestureRecognizer) {
-        if gesture.state == .began {
-            handleGestureBegan(gesture: gesture)
-            
-        } else if gesture.state == .ended {
-            
-            // clean up the animation
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                let stackView = self.iconsContainerView.subviews.first
-                stackView?.subviews.forEach({ (imageView) in
-                    imageView.transform = .identity
-                })
-                
-                self.iconsContainerView.transform = self.iconsContainerView.transform.translatedBy(x: 0, y: 50)
-                self.iconsContainerView.alpha = 0
-                
-            }, completion: { _ in
-                self.iconsContainerView.removeFromSuperview()
-            })
-            
-            
-        } else if gesture.state == .changed {
-            handleGestureChange(gesture: gesture)
-        }
-    }
-    
-    
-    fileprivate func handleGestureChange(gesture: UILongPressGestureRecognizer) {
-        let pressedLocation = gesture.location(in: iconsContainerView)
-        print(pressedLocation)
-        
-        let fixedYLocation = CGPoint(x: pressedLocation.x, y: iconsContainerView.frame.height / 2)
-        let hitTestView = iconsContainerView.hitTest(fixedYLocation, with: nil)
-        
-        
-        if hitTestView is UIImageView {
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
-                
-                let stackView = self.iconsContainerView.subviews.first
-                stackView?.subviews.forEach({ (imageView) in
-                    imageView.transform = .identity
-                })
-                hitTestView?.transform = CGAffineTransform(translationX: 0, y: -50)
-            } completion: { _ in
-            }
-
-        }
-    }
-    
-    fileprivate func handleGestureBegan(gesture: UILongPressGestureRecognizer) {
-        bgImageView.addSubview(iconsContainerView)
-        
-        let pressedLocation = gesture.location(in: bgImageView)
-        print(pressedLocation)
-        
-        // transforamtion of the yellow box
-        let centeredX = (bgImageView.frame.width - iconsContainerView.frame.width) / 2
-        
-        
-        // alpha
-        
-        iconsContainerView.alpha = 0
-        iconsContainerView.transform = CGAffineTransform(translationX: centeredX, y: pressedLocation.y)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
-            self.iconsContainerView.alpha = 1
-            self.iconsContainerView.transform = CGAffineTransform(translationX: centeredX, y: pressedLocation.y - self.iconsContainerView.frame.height)
-        } completion: { _ in
-            
-        }
-
-    }
-    
     @objc func close() {
         self.removeFromSuperview()
     }
+    
+    @objc func addEmote() {
+        print("감표")
+        emoteBegan()
+    }
+    
+    
 }

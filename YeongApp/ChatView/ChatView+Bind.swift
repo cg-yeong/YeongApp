@@ -26,9 +26,14 @@ extension ChatView {
                 self?.toggleFloating(true)
             }.disposed(by: bag)
         
-        fResume.rx.tap
-            .bind {[weak self] in
+        mainBtn.rx.tap
+            .bind { [weak self] in
                 self?.toggleFloating(false)
+            }.disposed(by: bag)
+        
+        closeBtn.rx.tap
+            .bind { [weak self] in
+                self?.removeFromSuperview()
             }.disposed(by: bag)
         
         chatSendBtn.rx.tap
@@ -36,6 +41,8 @@ extension ChatView {
                 guard let self = self else { return }
                 guard let text = self.chatTextView.text else { return }
             }.disposed(by: bag)
+        
+        
         
     }
 }
