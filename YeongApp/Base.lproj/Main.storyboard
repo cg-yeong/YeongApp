@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,10 +39,48 @@
                                             <action selector="likePopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIy-tM-hF5"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze8-Et-aoo" customClass="CustomSwitch" customModule="YeongApp" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="138" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="e68-q8-g7z"/>
+                                            <constraint firstAttribute="height" constant="128" id="pqp-c2-BIy"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                                <color key="value" red="1" green="0.20392156859999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="offTintColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="thumbTintColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="thumbCornerRadius">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="blue_like"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="thumbSize">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Ze8-Et-aoo" firstAttribute="top" secondItem="K2L-pm-ITK" secondAttribute="top" constant="138" id="5fz-ra-nnz"/>
                                     <constraint firstItem="3B0-el-kjq" firstAttribute="centerY" secondItem="K2L-pm-ITK" secondAttribute="centerY" id="Vdy-Ou-bmr"/>
+                                    <constraint firstItem="Ze8-Et-aoo" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="aNn-zM-cfc"/>
                                     <constraint firstItem="Wal-gw-ez5" firstAttribute="top" secondItem="3B0-el-kjq" secondAttribute="bottom" constant="48.5" id="dvQ-eK-GJH"/>
                                     <constraint firstItem="3B0-el-kjq" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="xgK-cr-U3c"/>
                                     <constraint firstItem="Wal-gw-ez5" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="xtk-v7-Rwe"/>
@@ -68,11 +106,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blue_like" width="59" height="59"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

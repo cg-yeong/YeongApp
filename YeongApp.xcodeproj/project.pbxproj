@@ -37,6 +37,8 @@
 		66C18BA2278C1139005042FE /* PresenterTrasnfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */; };
 		66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18BAC278E9F04005042FE /* Extension+etc.swift */; };
 		66C664BC27C702AE00826E98 /* YeongSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C664BB27C702AE00826E98 /* YeongSwitchButton.swift */; };
+		66DA221D27CF068500757E62 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA221C27CF068500757E62 /* CustomSwitch.swift */; };
+		66DA221F27CF450500757E62 /* CustomSwitchThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA221E27CF450500757E62 /* CustomSwitchThumbView.swift */; };
 		BEF313EBC049AE4BA5003B6D /* Pods_YeongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		66C18BA1278C1139005042FE /* PresenterTrasnfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterTrasnfer.swift; sourceTree = "<group>"; };
 		66C18BAC278E9F04005042FE /* Extension+etc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+etc.swift"; sourceTree = "<group>"; };
 		66C664BB27C702AE00826E98 /* YeongSwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeongSwitchButton.swift; sourceTree = "<group>"; };
+		66DA221C27CF068500757E62 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		66DA221E27CF450500757E62 /* CustomSwitchThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchThumbView.swift; sourceTree = "<group>"; };
 		67FC4D64C8570F58C24602F6 /* Pods-YeongAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YeongAppTests/Pods-YeongAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7379CA304159A613188B47B7 /* Pods-YeongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeongApp.debug.xcconfig"; path = "Target Support Files/Pods-YeongApp/Pods-YeongApp.debug.xcconfig"; sourceTree = "<group>"; };
 		755BCBCD31F5AE7A89DA999F /* Pods_YeongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				66C18B99278C0547005042FE /* UI */,
+				66DA221C27CF068500757E62 /* CustomSwitch.swift */,
+				66DA221E27CF450500757E62 /* CustomSwitchThumbView.swift */,
 			);
 			path = Generals;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 			files = (
 				66C18BA0278C106D005042FE /* Presenter.swift in Sources */,
 				66C18B53278BD0FB005042FE /* ViewController.swift in Sources */,
+				66DA221F27CF450500757E62 /* CustomSwitchThumbView.swift in Sources */,
 				66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */,
 				6682A94D279FDF1D0033BE63 /* PersistenceManager.swift in Sources */,
 				6682A94B279FD85C0033BE63 /* AppData.swift in Sources */,
@@ -533,6 +540,7 @@
 				66C18B9B278C054E005042FE /* XibView.swift in Sources */,
 				6667E3B727C4A10C0012454E /* LikePopup+Emote.swift in Sources */,
 				66C664BC27C702AE00826E98 /* YeongSwitchButton.swift in Sources */,
+				66DA221D27CF068500757E62 /* CustomSwitch.swift in Sources */,
 				66749FDF27BF5884000EB46F /* ChatView+Obs.swift in Sources */,
 				66749FEB27C31434000EB46F /* LikePopup.swift in Sources */,
 				66749FE127BF5AEF000EB46F /* ChatView+Bind.swift in Sources */,

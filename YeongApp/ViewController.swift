@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         print("viewDidLoad")
         App.presenter.mainVC = self
         
+//        let customSwith = CustomSwitch(frame: CGRect(x: 100, y: 350, width: 300, height: 100))
+//        customSwith.center.x = self.view.center.x
+//        self.view.addSubview(customSwith)
         
     }
 
