@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollChatBaloon" customModule="YeongApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-4c-Ku9">
+                    <rect key="frame" x="5" y="10" width="190" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초기값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-G4-bO8">
+                            <rect key="frame" x="0.0" y="0.0" width="190" height="60"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vi1-G4-bO8" secondAttribute="bottom" id="16p-WC-hHc"/>
+                        <constraint firstItem="vi1-G4-bO8" firstAttribute="leading" secondItem="jgM-4c-Ku9" secondAttribute="leading" id="IpA-f3-XQb"/>
+                        <constraint firstAttribute="trailing" secondItem="vi1-G4-bO8" secondAttribute="trailing" id="TN2-q7-FFb"/>
+                        <constraint firstItem="vi1-G4-bO8" firstAttribute="top" secondItem="jgM-4c-Ku9" secondAttribute="top" id="w1j-PI-FS8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="jgM-4c-Ku9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="6jp-1p-aJx"/>
+                <constraint firstAttribute="trailing" secondItem="jgM-4c-Ku9" secondAttribute="trailing" constant="5" id="YhM-Q8-m3F"/>
+                <constraint firstItem="jgM-4c-Ku9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="aCu-yj-2q2"/>
+                <constraint firstAttribute="bottom" secondItem="jgM-4c-Ku9" secondAttribute="bottom" constant="10" id="rqU-uu-REW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="107"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

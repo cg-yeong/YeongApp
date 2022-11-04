@@ -6,21 +6,26 @@
 //
 
 import UIKit
-import CoreData
 
-struct Person {
-    var name: String
-    var phoneNumber: String
-    var shortNumber: Int
-    var habbit: [String]
-}
 
 class ViewController: UIViewController {
     
     
     
+    @IBOutlet weak var mainPlate: UIView!
     @IBOutlet weak var con: UIView!
-    @IBOutlet weak var chatBtn: UIButton!
+    
+    private let width = 200.0
+    private let height = 55.0
+    
+    private lazy var protoChatBalloon: ScrollChatBaloon = {
+        let bubble = ScrollChatBaloon()
+        bubble.viewColor = .orange
+        bubble.tipHeight = 5
+        bubble.tipWidth = 10
+        
+        return bubble
+    }()
     
     override var prefersStatusBarHidden: Bool { return true }
     
@@ -30,26 +35,14 @@ class ViewController: UIViewController {
         print("viewDidLoad")
         App.presenter.mainVC = self
         
-//        let customSwith = CustomSwitch(frame: CGRect(x: 100, y: 350, width: 300, height: 100))
-//        customSwith.center.x = self.view.center.x
-//        self.view.addSubview(customSwith)
+        self.view.addSubview(self.protoChatBalloon)
+        self.protoChatBalloon.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.width.equalTo(self.width)
+        }
         
     }
 
-    @IBAction func openChat(_ sender: Any) {
-        App.presenter.addSubview(.visibleView, type: ChatView.self) { view in
-            view.tag = 1010
-            App.presenter.contextView = view
-        }
-    }
-    
-    
-    @IBAction func likePopup(_ sender: Any) {
-        App.presenter.addSubview(.visibleView, type: LikePopup.self) { view in
-            view.tag = 1010
-            App.presenter.contextView = view
-        }
-    }
     
     
     
@@ -58,48 +51,5 @@ class ViewController: UIViewController {
     
     
     
-    
-    func setCoreData1() {
-        
-        let yeong = Person(name: "Yeong", phoneNumber: "010-3333-4444", shortNumber: 1, habbit: ["game", "vi"])
-        let entity = NSEntityDescription.entity(forEntityName: "Contact", in: App.data.persistence.context)
-        if let entity = entity {
-            let person = NSManagedObject(entity: entity, insertInto: App.data.persistence.context)
-            person.setValue(yeong.name, forKey: "name")
-            person.setValue(yeong.phoneNumber, forKey: "phoneNumber")
-            person.setValue(yeong.shortNumber, forKey: "shortNumber")
-            
-            do {
-                try App.data.persistence.context.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        let walker = Person(name: "Walker", phoneNumber: "010-1234-5678", shortNumber: 2, habbit: ["games", "asdf"])
-        App.data.persistence.insertPerson(person: walker)
-    }
-    func crudCoreData1() {
-        // delete
-        let dequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-        let detchResult = App.data.persistence.fetch(request: dequest)
-        App.data.persistence.delete(object: detchResult.first ?? NSManagedObject())
-        
-        // fetch
-        let request: NSFetchRequest<Contact> = Contact.fetchRequest()
-        let fetchResult = App.data.persistence.fetch(request: request)
-        print(App.data.persistence.count(request: request))
-        fetchResult.forEach {
-            print($0.name!, $0.phoneNumber!, $0.shortNumber)
-        }
-        
-        // deleteAll
-        let dAquest: NSFetchRequest<Contact> = Contact.fetchRequest()
-        let dAetchResutl = App.data.persistence.deleteAll(request: dAquest)
-        let arr = App.data.persistence.fetch(request: dAquest)
-        if arr.isEmpty {
-            print("clean")
-        }
-        
-    }
 }
 

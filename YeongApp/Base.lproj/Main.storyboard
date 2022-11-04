@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-pm-ITK">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-pm-ITK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B0-el-kjq">
@@ -86,18 +86,27 @@
                                     <constraint firstItem="Wal-gw-ez5" firstAttribute="centerX" secondItem="K2L-pm-ITK" secondAttribute="centerX" id="xtk-v7-Rwe"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-u9-TCw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2UY-u9-TCw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AS5-Tb-Vw4"/>
+                            <constraint firstItem="2UY-u9-TCw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G13-fb-adQ"/>
                             <constraint firstItem="K2L-pm-ITK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JK5-Tg-toO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2UY-u9-TCw" secondAttribute="trailing" id="LOz-20-bfM"/>
                             <constraint firstItem="K2L-pm-ITK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nnp-Gs-JIk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K2L-pm-ITK" secondAttribute="bottom" id="bkw-an-cBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2UY-u9-TCw" secondAttribute="bottom" id="gKF-U3-zJw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2L-pm-ITK" secondAttribute="trailing" id="jO1-wf-XGd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="con" destination="K2L-pm-ITK" id="y7O-wn-8aa"/>
+                        <outlet property="mainPlate" destination="2UY-u9-TCw" id="rio-fH-gHm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,9 +20,11 @@
 		66749FEB27C31434000EB46F /* LikePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66749FEA27C31434000EB46F /* LikePopup.swift */; };
 		66749FED27C31482000EB46F /* LikePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66749FEC27C31482000EB46F /* LikePopup.xib */; };
 		66749FF327C45DB6000EB46F /* ChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66749FF227C45DB6000EB46F /* ChatView.xib */; };
-		6682A926279FD0000033BE63 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6682A924279FD0000033BE63 /* Model.xcdatamodeld */; };
 		6682A94B279FD85C0033BE63 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682A94A279FD85C0033BE63 /* AppData.swift */; };
 		6682A94D279FDF1D0033BE63 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682A94C279FDF1D0033BE63 /* PersistenceManager.swift */; };
+		6693A7092840AFCE00164E4E /* ViewController+ETC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6693A7082840AFCE00164E4E /* ViewController+ETC.swift */; };
+		6693A70D2840B74400164E4E /* ScrollChatBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6693A70C2840B74400164E4E /* ScrollChatBalloon.swift */; };
+		6693A70F2840C52300164E4E /* ScrollChatBalloon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6693A70E2840C52300164E4E /* ScrollChatBalloon.xib */; };
 		66C18B4F278BD0FB005042FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B4E278BD0FB005042FE /* AppDelegate.swift */; };
 		66C18B53278BD0FB005042FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C18B52278BD0FB005042FE /* ViewController.swift */; };
 		66C18B56278BD0FB005042FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C18B54278BD0FB005042FE /* Main.storyboard */; };
@@ -74,9 +76,11 @@
 		66749FEA27C31434000EB46F /* LikePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePopup.swift; sourceTree = "<group>"; };
 		66749FEC27C31482000EB46F /* LikePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikePopup.xib; sourceTree = "<group>"; };
 		66749FF227C45DB6000EB46F /* ChatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatView.xib; sourceTree = "<group>"; };
-		6682A925279FD0000033BE63 /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
 		6682A94A279FD85C0033BE63 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		6682A94C279FDF1D0033BE63 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		6693A7082840AFCE00164E4E /* ViewController+ETC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ETC.swift"; sourceTree = "<group>"; };
+		6693A70C2840B74400164E4E /* ScrollChatBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollChatBalloon.swift; sourceTree = "<group>"; };
+		6693A70E2840C52300164E4E /* ScrollChatBalloon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollChatBalloon.xib; sourceTree = "<group>"; };
 		66C18B4B278BD0FB005042FE /* YeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C18B4E278BD0FB005042FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C18B52278BD0FB005042FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,9 @@
 				66749FE927C31420000EB46F /* LikePopUp */,
 				66C18B4E278BD0FB005042FE /* AppDelegate.swift */,
 				66C18B52278BD0FB005042FE /* ViewController.swift */,
+				6693A70C2840B74400164E4E /* ScrollChatBalloon.swift */,
+				6693A70E2840C52300164E4E /* ScrollChatBalloon.xib */,
+				6693A7082840AFCE00164E4E /* ViewController+ETC.swift */,
 				66C18B54278BD0FB005042FE /* Main.storyboard */,
 				66C18B57278BD0FC005042FE /* Assets.xcassets */,
 				66C18B59278BD0FC005042FE /* LaunchScreen.storyboard */,
@@ -217,7 +224,6 @@
 				66749FE727BF60F4000EB46F /* ChatView+Collection.swift */,
 				66749FE027BF5AEF000EB46F /* ChatView+Bind.swift */,
 				66749FDE27BF5884000EB46F /* ChatView+Obs.swift */,
-				6682A924279FD0000033BE63 /* Model.xcdatamodeld */,
 				66749FF227C45DB6000EB46F /* ChatView.xib */,
 			);
 			path = ChatView;
@@ -395,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6693A70F2840C52300164E4E /* ScrollChatBalloon.xib in Resources */,
 				66749FED27C31482000EB46F /* LikePopup.xib in Resources */,
 				66749FF327C45DB6000EB46F /* ChatView.xib in Resources */,
 				66C18B5B278BD0FC005042FE /* LaunchScreen.storyboard in Resources */,
@@ -530,10 +537,12 @@
 			files = (
 				66C18BA0278C106D005042FE /* Presenter.swift in Sources */,
 				66C18B53278BD0FB005042FE /* ViewController.swift in Sources */,
+				6693A70D2840B74400164E4E /* ScrollChatBalloon.swift in Sources */,
 				66DA221F27CF450500757E62 /* CustomSwitchThumbView.swift in Sources */,
 				66C18BAD278E9F04005042FE /* Extension+etc.swift in Sources */,
 				6682A94D279FDF1D0033BE63 /* PersistenceManager.swift in Sources */,
 				6682A94B279FD85C0033BE63 /* AppData.swift in Sources */,
+				6693A7092840AFCE00164E4E /* ViewController+ETC.swift in Sources */,
 				66C18B96278C018C005042FE /* ChatView.swift in Sources */,
 				66749FE827BF60F4000EB46F /* ChatView+Collection.swift in Sources */,
 				66C18BA2278C1139005042FE /* PresenterTrasnfer.swift in Sources */,
@@ -545,7 +554,6 @@
 				66749FEB27C31434000EB46F /* LikePopup.swift in Sources */,
 				66749FE127BF5AEF000EB46F /* ChatView+Bind.swift in Sources */,
 				66749FE627BF5D6B000EB46F /* TextCell.swift in Sources */,
-				6682A926279FD0000033BE63 /* Model.xcdatamodeld in Sources */,
 				6636E112279FB6C000EA4550 /* Extension+UILabel.swift in Sources */,
 				66C18B9E278C1059005042FE /* App.swift in Sources */,
 				6667E3B527C473960012454E /* ChatView+Func.swift in Sources */,
@@ -920,19 +928,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6682A924279FD0000033BE63 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6682A925279FD0000033BE63 /* Contact.xcdatamodel */,
-			);
-			currentVersion = 6682A925279FD0000033BE63 /* Contact.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 66C18B43278BD0FB005042FE /* Project object */;
 }
